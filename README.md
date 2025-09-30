@@ -107,15 +107,42 @@ jupyter notebook
 - Visualization of fire occurrence patterns
 
 ### Machine Learning Models
-1. **Linear Regression** (Baseline)
-2. **Ridge Regression** (L2 Regularization)
-3. **Lasso Regression** (L1 Regularization)
+
+The following algorithms were implemented and evaluated:
+
+#### 1. **Linear Regression** (Baseline)
+- **R² Score**: 0.9848
+- Standard linear regression without regularization
+
+#### 2. **Ridge Regression** (L2 Regularization)
+- **Ridge**: R² Score = 0.9843
+- **RidgeCV** (Cross-Validated): R² Score = 0.9843
+
+#### 3. **Lasso Regression** (L1 Regularization)
+- **Lasso**: R² Score = 0.9492
+- **LassoCV** (Cross-Validated): R² Score = 0.9821
+
+#### 4. **ElasticNet Regression** (L1 + L2 Regularization)
+- **ElasticNet**: R² Score = 0.8753
+- **ElasticNetCV** (Cross-Validated): R² Score = 0.9814
+
+### Model Performance Summary
+
+| Algorithm | R² Score | Performance Rank |
+|-----------|----------|------------------|
+| Linear Regression | 0.9848 | 🥇 1st |
+| RidgeCV | 0.9843 | 🥈 2nd |
+| Ridge | 0.9843 | 🥈 2nd |
+| LassoCV | 0.9821 | 🥉 3rd |
+| ElasticNetCV | 0.9814 | 4th |
+| Lasso | 0.9492 | 5th |
+| ElasticNet | 0.8753 | 6th |
 
 ### Model Evaluation
-- Cross-validation techniques
-- Performance metrics (MSE, R², etc.)
+- Cross-validation techniques for model selection
+- Performance metrics (MSE, MAE, R²)
 - Feature importance analysis
-- Model comparison and selection
+- Model comparison and hyperparameter tuning
 
 ## 🎯 Key Results
 
